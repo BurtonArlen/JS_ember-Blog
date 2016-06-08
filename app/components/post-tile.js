@@ -9,7 +9,6 @@ export default Ember.Component.extend({
       }
     },
     update(post, params) {
-      debugger;
       this.sendAction('update', post, params);
     }
   }

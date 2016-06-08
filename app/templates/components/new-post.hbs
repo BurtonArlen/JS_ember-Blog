@@ -1,5 +1,5 @@
 {{#if addNewPost}}
-  <h2>new Post</h2>
+  <h2>New Post</h2>
   <div>
     <form>
       <div class="form-group">
@@ -9,6 +9,10 @@
       <div class="form-group">
         <label for="topic">Topic</label>
         {{input value=topic id="topic"}}
+      </div>
+      <div class="form-group">
+        <label for="category">Category</label>
+        {{input value=category id="category" placeholder=rental.category}}
       </div>
       <div class="form-group">
         <label for="body">Post Body</label>
@@ -21,6 +25,6 @@
       <button{{action 'save'}}> POST </button>
     </form>
   </div>
-  {{else}}
+{{else}}
   <button {{action 'postFormShow'}}>New Post</button>
 {{/if}}

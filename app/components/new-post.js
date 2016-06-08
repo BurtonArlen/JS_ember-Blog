@@ -12,7 +12,9 @@ export default Ember.Component.extend({
         pseudonym: this.get('pseudonym'),
         topic: this.get('topic'),
         body: this.get('body'),
-        image: this.get('image')
+        image: this.get('image'),
+        category: this.get('category'),
+        // tag: this.get('tag'),
       };
       this.set('addNewPost', false);
       this.sendAction('save', params);
