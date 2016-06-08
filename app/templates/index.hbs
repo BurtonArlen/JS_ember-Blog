@@ -1,13 +1,14 @@
-<div class="container">
-  <div class="jumbotron">
-    <h1>HellaRad Blog Bro</h1>
-    <h3>Most extreme blog ever made by a guy whos never used a blog</h3>
-  </div>
-  <div class="body-post">
-    {{#each model as |post|}}
-      <div class="postBox">
-        {{post-tile post=post}}
-      </div>
-    {{/each}}
-  </div>
+<div class="jumbotron">
+  <h1>HellaRad Blog Bro</h1>
+  <h3>Most extreme blog ever made by a guy whos never used a blog</h3>
+</div>
+<div class="newPost">
+  {{new-post save="save"}}
+</div>
+<div class="body-post">
+  {{#each model as |post|}}
+    <div class="postBox">
+      {{post-tile post=post update="update" destroyPost="destroyPost"}}
+    </div>
+  {{/each}}
 </div>

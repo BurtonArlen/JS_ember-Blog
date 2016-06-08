@@ -1,0 +1,28 @@
+h1 {
+  color: blue;
+}
+
+.postBox{
+  border-color: #000;
+  border-width: 6px;
+  border-style: groove;
+  border-radius: 20px;
+  min-width: 70%;
+  max-width: 80%;
+  height: auto;
+  margin: 8px;
+  padding: 10px;
+  background-color: #eee;
+  margin-left: 12%;
+}
+.postImage{
+  float: left;
+  max-width: 140px;
+  height: auto;
+
+}
+.postContent{
+  font-style: italic;
+  font-weight: bold;
+  font-variant: small-caps;
+}

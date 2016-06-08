@@ -3,4 +3,6 @@
   <h3>{{post.pseudonym}}</h3>
   <p>{{post.topic}}</p>
   <p>{{post.body}}</p>
+  {{update-post post=post update="update"}}
 </div>
+<button {{action 'delete' post}}>Delete</button>

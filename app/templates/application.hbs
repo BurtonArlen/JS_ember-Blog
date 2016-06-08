@@ -1,3 +1,18 @@
-<h2 id="title">Welcome to Ember</h2>
-
-{{outlet}}
+<nav class="navbar navbar-light bg-faded" style="margin-bottom:0px">
+  {{#link-to 'index'}}<a class="navbar-brand" style="margin-left:30px;color:#000;font-size:2.3em">RadBlog</a>{{/link-to}}
+  <ul class="nav navbar-nav" style="margin-left:8%;text-transform:uppercase;font-size: .83em;font-family:Helvetica,Arial,sans-serif;">
+    <li class="nav-item active">
+      {{#link-to 'contact'}}<a class="nav-link">Contact</a>{{/link-to}}
+    </li>
+    <li class="nav-item">
+      {{#link-to 'about'}}<a class="nav-link">About</a>{{/link-to}}
+    </li>
+    <li class="nav-item">
+      {{#link-to 'index'}}<a class="nav-link" >Home</a>{{/link-to}}
+    </li>
+  </ul>
+</nav>
+  <hr style="margin-top:0px">
+<div class="container">
+  {{outlet}}
+</div>

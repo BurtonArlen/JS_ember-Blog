@@ -1,0 +1,26 @@
+{{#if updatePostForm}}
+  <h4>Update {{post.pseudonym}}'s Post About {{post.topic}}</h4>
+    <div>
+    <form>
+      <div class="form-group">
+        <label for="pseudonym">Screen Name</label>
+        {{input value=pseudonym id="pseudonym"}}
+      </div>
+      <div class="form-group">
+        <label for="topic">Topic</label>
+        {{input value=topic id="topic"}}
+      </div>
+      <div class="form-group">
+        <label for="body">Post Body</label>
+        {{input value=body id="body"}}
+      </div>
+      <div class="form-group">
+        <label for="image">Image url</label>
+        {{input value=image id="image"}}
+      </div>
+      <button{{action 'update' post}}> Update </button>
+    </form>
+  </div>
+{{else}}
+  <button {{action 'updatePostForm'}}>Update</button>
+{{/if}}
