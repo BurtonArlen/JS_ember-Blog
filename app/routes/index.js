@@ -2,11 +2,19 @@ import Ember from 'ember';
 
 export default Ember.Route.extend({
   model(){
-    return this.store.findAll('post');
+    return Ember.RSVP.hash({
+      posts: this.store.findAll('post'),
+      categories: this.store.findAll('category')
+    });
+  },
+
+  setupController(controller, model) {
+    this._super(...arguments);
+    Ember.set(controller, 'posts', model.posts);
+    Ember.set(controller, 'categories', model.categories);
   },
 
   actions: {
-
     destroyPost(post) {
       post.destroyRecord();
       this.transitionTo('index');
@@ -30,6 +38,7 @@ export default Ember.Route.extend({
     save(params) {
       var newPost = this.store.createRecord('post', params);
       var category = params.category;
+      debugger;
       category.get('posts').addObject(newPost);
       newPost.save().then(function() {
         return category.save();

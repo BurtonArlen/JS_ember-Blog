@@ -26,3 +26,7 @@ h1 {
   font-weight: bold;
   font-variant: small-caps;
 }
+
+.categoryBox {
+  margin-bottom: 10px;
+}

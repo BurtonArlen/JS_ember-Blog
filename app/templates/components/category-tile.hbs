@@ -1,8 +1,9 @@
 
-{{category-tile category=model destroyCategory="destroyCategory"}}
 
+<h1>{{category.name}}</h1>
+{{new-post save="save" category=model}}
 <div class="body-post">
-  {{#each model.posts as |post|}}
+  {{#each model as |post|}}
     <div class="postBox">
       {{post-tile post=post update="update" destroyPost="destroyPost"}}
     </div>
